@@ -24,31 +24,3 @@ Description: image creator for Linux distributions
   convert an image to a specified type; subcommand chroot is used to chroot into
   an image.
 
-Package: mic-native
-Architecture: all
-Depends: ${misc:Depends}, ${python:Depends},
- util-linux,
- coreutils,
- psmisc,
- e2fsprogs (>= 1.41),
- dosfstools,
- isomd5sum,
- genisoimage,
- dmsetup,
- kpartx,
- parted,
- squashfs-tools (>= 4.0),
- yum (>= 3.2),
- syslinux (>= 2:4.05),
- extlinux (>= 2:4.05),
- python-zypp-tizen,
- python-m2crypto,
- mic,
-Recommends:
- qemu-arm-static | qemu-user-static,
- binfmt-support,
- btrfs-tools,
- udisks | hal
-Description: Native support for mic
- The native support package for mic, it includes all requirements
- for mic native running.

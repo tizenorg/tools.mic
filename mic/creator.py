@@ -94,7 +94,7 @@ class Creator(cmdln.Cmdln):
                              help='Path for local pkgs(rpms) to be installed')
         optparser.add_option('', '--runtime', type='string',
                              dest='runtime', default=None,
-                             help='Specify  runtime mode, avaiable: bootstrap, native')
+                             help='Specify  runtime mode, avaiable: bootstrap')
         # --taring-to is alias to --pack-to
         optparser.add_option('', '--taring-to', type='string',
                              dest='pack_to', default=None,

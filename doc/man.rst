@@ -50,6 +50,10 @@ Options:
   --pack-to=PACK_TO   pack the images together into the specified achive, extension supported: .zip, .tar, .tar.gz, .tar.bz2, etc. by default, .tar will be used
   --release=RID  generate a release of RID with all necessary files, when @BUILD_ID@ is contained in kickstart file, it will be replaced by RID. sample values: "latest", "tizen_20120101.1"
   --copy-kernel  copy kernel files from image /boot directory to the image output directory
+  --runtime=RUNTIME  Specify  runtime mode, avaiable: bootstrap
+  --install-pkgs=INSTALL_PKGS  Specify what type of packages to be installed, valid: source, debuginfo, debugsource
+  --check-pkgs=CHECK_PKGS  Check if given packages would be installed, packages should be separated by comma
+  --tmpfs  Setup tmpdir as tmpfs to accelerate, experimental feature, use it if you have more than 4G memory
 
 Options for fs image:
   --include-src  generate a image with source rpms included; to enable it, user should specify the source repo in the ks file

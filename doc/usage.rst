@@ -112,13 +112,12 @@ In Tizen, the released image will have a ks file along with image. For example, 
 
 - Other options:
 
-:: 
+::
 
    --runtime=RUNTIME_MODE
                        Sets runtime mode, the default is bootstrap mode, valid
-                       values: "native", "bootstrap". "native" means mic uses
-                       localhost environment to create image, while "bootstrap"
-                       means mic uses one tizen chroot environment to create image.
+                       values: "bootstrap". "bootstrap"  means mic uses one
+                       tizen chroot environment to create image.
     --compress-image=COMPRESS_IMAGE (for loop & raw)
                        Sets the disk image compression. Note: The available
                        values might depend on the used filesystem type.

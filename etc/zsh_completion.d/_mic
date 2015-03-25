@@ -60,7 +60,7 @@ _mic() {
             '--record-pkgs=[Record the info of installed packages, multiple values can be specified which joined by \",\", valid values: \"name\", \"content\", \"license\", \"vcs\"]: :_mic_create_filters -s ,' \
             '--pkgmgr=[Specify backend package manager]:parameter' \
             '--local-pkgs-path=[Path for local pkgs(rpms) to be installed]:path' \
-            '--runtime=[Specify  runtime mode, avaiable: bootstrap, native]: :(bootstrap native)' \
+            '--runtime=[Specify  runtime mode, avaiable: bootstrap]: :(bootstrap)' \
             '--pack-to=[Pack the images together into the specified achive, extension supported: .zip, .tar, .tar.gz, .tar.bz2, etc. by default, .tar will be used]:parameter' \
             '--copy-kernel[Copy kernel files from image /boot directory to the image output directory.]' \
             '--install-pkgs=[Specify what type of packages to be installed, valid: source, debuginfo, debugsource]: :(source debuginfo debugsource)' \
@@ -84,7 +84,7 @@ _mic() {
                 '--record-pkgs=[Record the info of installed packages, multiple values can be specified which joined by \",\", valid values: \"name\", \"content\", \"license\", \"vcs\"]: :_mic_create_filters -s ,' \
                 '--pkgmgr=[Specify backend package manager]:parameter' \
                 '--local-pkgs-path=[Path for local pkgs(rpms) to be installed]:path' \
-                '--runtime=[Specify  runtime mode, avaiable: bootstrap, native]: :(bootstrap native)' \
+                '--runtime=[Specify  runtime mode, avaiable: bootstrap]: :(bootstrap)' \
                 '--pack-to=[Pack the images together into the specified achive, extension supported: .zip, .tar, .tar.gz, .tar.bz2, etc. by default, .tar will be used]:parameter' \
                 '--copy-kernel[Copy kernel files from image /boot directory to the image output directory.]' \
                 '--install-pkgs=[Specify what type of packages to be installed, valid: source, debuginfo, debugsource]: :(source debuginfo debugsource)' \

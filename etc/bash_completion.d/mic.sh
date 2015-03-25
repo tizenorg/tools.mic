@@ -119,7 +119,6 @@ __mic_complete_val()
         latest
     "
     runtime_values="
-        native
         bootstrap
     "
     record_pkgs_values="

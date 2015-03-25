@@ -49,59 +49,6 @@ is used to create images with different types; subcommand convert is used to
 convert an image to a specified type; subcommand chroot is used to chroot into
 an image.
 
-%package native
-Summary:    Native support for mic
-Requires:   util-linux
-Requires:   coreutils
-Requires:   psmisc
-Requires:   e2fsprogs
-Requires:   dosfstools >= 2.11
-Requires:   kpartx
-Requires:   parted
-Requires:   device-mapper
-Requires:   syslinux >= 3.82
-%if ! 0%{?suse_version}
-Requires:   syslinux-extlinux >= 3.82
-%endif
-
-%if 0%{?suse_version} || 0%{?tizen_version:1}
-Requires:   squashfs >= 4.0
-Requires:   python-m2crypto
-%else
-Requires:   python-libs
-Requires:   squashfs-tools >= 4.0
-Requires:   m2crypto
-%endif
-
-%if 0%{?suse_version} || 0%{?tizen_version:1}
-Requires:   /usr/bin/qemu-arm
-%else
-Requires:   qemu-arm-static
-%endif
-
-%if ! 0%{?tizen_version:1}
-Requires:   isomd5sum
-Requires:   /usr/bin/genisoimage
-%endif
-
-Requires:   yum >= 3.2.24
-%if 0%{?tizen_version:1}
-Requires:   python-zypp
-%else
-Requires:   python-zypp-tizen
-%endif
-
-Requires:   mic
-
-#%if 0%{?suse_version}
-#Requires:   btrfsprogs
-#%else
-#Requires:   btrfs-progs
-#%endif
-
-%description native
-The native support package for mic, it includes all requirements
-for mic native running.
 
 %prep
 %setup -q -n %{name}-%{version}
@@ -130,8 +77,6 @@ install -Dp -m0755 etc/bash_completion.d/%{name}.sh %{buildroot}/%{_sysconfdir}/
 install -d -m0755 %{buildroot}/%{_sysconfdir}/zsh_completion.d/
 install -Dp -m0755 etc/zsh_completion.d/_%{name} %{buildroot}/%{_sysconfdir}/zsh_completion.d/
 
-install -Dp -m0755 tools/mic %{buildroot}/%{_bindir}/mic-native
-
 %files
 %defattr(-,root,root,-)
 %doc doc/*
@@ -148,5 +93,3 @@ install -Dp -m0755 tools/mic %{buildroot}/%{_bindir}/mic-native
 %{_sysconfdir}/bash_completion.d
 %{_sysconfdir}/zsh_completion.d
 
-%files native
-%{_bindir}/mic-native
