@@ -1,3 +1,6 @@
+* Tue Aug 04 2015 Jianzhong Fang <jz.fang@samsung.com> - 0.24.5
+  * drop mic native support
+
 * Thu Jan 22 2015 Lihong Sun <lihongx.sun@intel.com> - 0.24.4
   * generate manifest file to describe image information
   * update mount option to make it more general
